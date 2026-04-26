@@ -8,6 +8,16 @@ from .engine import electronic_configuration
 from .noble_gas import noble_gas_shorthand
 from .data import Element
 
+import sys
+
+def is_interactive():
+    return sys.stdin.isatty()
+
+def get_continuation() -> str:
+    """Get user input for continuing the loop."""
+    if is_interactive():
+        return input("\nWould you like to continue (Yes: Y): ")[:1].upper()
+    return "N"
 
 # ------------------------------------------------------------
 # Menu options (Strategy Pattern)
@@ -114,7 +124,8 @@ def main() -> None:
         except ValueError as e:
             print("\t", e)
 
-        cont = input("\nWould you like to continue (Yes: Y): ")[:1].upper()
+        # NEW: skip continuation prompt in non-interactive mode
+        cont = get_continuation()
         print()
 
 

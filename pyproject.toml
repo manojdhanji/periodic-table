@@ -1,19 +1,28 @@
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "periodic-table"
 version = "1.0.0"
-description = "A clean periodic table package with electron configuration and noble-gas shorthand logic."
+description = "A Python package for element lookup, electron configurations, noble-gas shorthand, and CLI access."
 authors = [
     { name = "Manoj" }
 ]
 readme = "README.md"
 requires-python = ">=3.10"
+license = { text = "MIT" }
 
-# If you ever add dependencies, list them here:
-# dependencies = ["numpy", "requests"]
+# No runtime dependencies required
+dependencies = []
 
-[project.urls]
-Homepage = "https://example.com"
+# Optional developer dependencies
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov"
+]
+
+# Optional: expose a console script so users can run `periodic-table` directly
+[project.scripts]
+periodic-table = "periodic_table.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

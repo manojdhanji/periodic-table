@@ -17,7 +17,7 @@ from .lookup import (
     get_all_elements,
 )
 from .engine import electronic_configuration
-from .noble_gas import noble_gas_shorthand
+from .noble_gas import noble_gas_shorthand, noble_gas_core
 
 __all__ = [
     "Element",
