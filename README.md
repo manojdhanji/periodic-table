@@ -1,5 +1,6 @@
-# Periodic Table — Electron Configuration Engine
+# Periodic Table - Electron Configuration Engine
 *This project is designed with a clear separation of concerns, making it easy to extend, test, port to JavaScript, or integrate into a UI.*
+
 This project was built to provide a clean, accurate, and extensible electron‑configuration engine suitable for teaching, demos, and UI visualization. 
 Most online tools hard‑code configurations; this engine computes them algorithmically using the Aufbau principle and real‑world exceptions.
 
